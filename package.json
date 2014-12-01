@@ -1,0 +1,64 @@
+{
+  "name": "famous-physics-playground",
+  "version": "0.0.1",
+  "homepage": "https://github.com/IjzerenHein/famous-physics-playground",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/IjzerenHein/famous-physics-playground.git"
+  },
+  "author": {
+    "name": "Hein Rutjes <hrutjes@gmail.com>"
+  },
+  "description": "Playground for experimenting with physics based animation effects",
+  "keywords": [
+    "famo.us",
+    "famous"
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/IjzerenHein/famous-physics-playground/blob/master/LICENSE"
+    }
+  ],
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/IjzerenHein/famous-physics-playground/issues"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "devDependencies": {
+    "css-loader": "^0.7.0",
+    "expose-loader": "^0.5.3",
+    "famous": "latest",
+    "famous-lagometer": "latest",
+    "famous-polyfills": "latest",
+    "fastclick": "^1.0.3",
+    "file-loader": "^0.6.1",
+    "firebase": "^2.0.4",
+    "glob": "^4.0.5",
+    "grunt": "latest",
+    "grunt-eslint": "latest",
+    "grunt-exec": "latest",
+    "grunt-ftp-deploy": "latest",
+    "grunt-jscs": "latest",
+    "grunt-jsdoc-to-markdown": "latest",
+    "handlebars-loader": "^0.1.7",
+    "html-loader": "^0.2.2",
+    "json-loader": "^0.5.1",
+    "moment": "^2.8.3",
+    "optimist": "^0.6.1",
+    "pleasejs": "^0.2.0",
+    "script-loader": "^0.6.0",
+    "style-loader": "^0.6.4",
+    "ua_parser": "^1.0.14",
+    "url-loader": "^0.5.5",
+    "webpack": "latest",
+    "webpack-cordova-plugin": "latest",
+    "webpack-dev-server": "latest"
+  },
+  "files": [
+    "src",
+    "LICENSE"
+  ]
+}

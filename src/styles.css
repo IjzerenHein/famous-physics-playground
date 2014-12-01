@@ -1,0 +1,13 @@
+body, div {
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: normal;
+}
+body {
+  background-color: #444444;
+  position: absolute;
+}
+
+.shape {
+  background: #AAAAAA;
+  border: 2px solid #666666;
+}
