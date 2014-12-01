@@ -49,13 +49,14 @@ define(function(require) {
     var shape3 = _createShape();
     var distance = _createDistance(particle, particle2);
     var spring = _createSpring(particle2, particle3);
+    var skew = _createSkew(particle, particle2);
     _setListeners();
     //_createLagometer();
 
 
-    mainContext.add(particle).add(shape);
-    mainContext.add(particle2).add(shape2);
-    mainContext.add(particle3).add(shape3);
+    mainContext.add(particle).add(skew).add(shape);
+    //mainContext.add(particle2).add(shape2);
+    //mainContext.add(particle3).add(shape3);
 
 
 
@@ -90,11 +91,26 @@ define(function(require) {
     function _createSpring(particle1, particle2) {
         var s = new Spring({
             anchor: particle2.position,
-            period: 1000,
-            dampingRatio: 0.7
+            period: 500,
+            dampingRatio: 0.3
         });
         pe.attach(s, particle1);
         return s;
+    }
+
+    function _createSkew(particle, particle2) {
+        var mod = new Modifier({
+            align: [0, 1],
+            origin: [0, 1]
+        });
+        mod.transformFrom(function() {
+            var xDiff = particle2.position.x - particle.position.x;
+            var yDiff = particle.position.y - particle2.position.y;
+            var angle = Math.atan2(yDiff, xDiff);
+            //console.log('angle: ' + angle + ', x: ' + xDiff + ', y: ' + yDiff);
+            return Transform.skew(0, 0, angle - (Math.PI / 2));
+        });
+        return mod;
     }
 
     function _setListeners() {
